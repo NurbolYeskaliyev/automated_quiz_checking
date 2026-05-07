@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - Automated Quiz Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Processed Quiz Image</h1>
+        <p>Here are the detection results for your sheet</p>
+    </header>
+
+    <main>
+        <section class="result-container">
+            <div style="margin-bottom: 20px;">
+                <img src="{{ url_for('send_output', filename=image_path.split('/')[-1]) }}" 
+                     alt="Processed Image" 
+                     style="max-width: 100%; height: auto; border-radius: 5px; border: 1px solid #ddd;">
+            </div>
+
+            <hr style="width: 100%; border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+
+            <h2>Detected Answers:</h2>
+            <ul>
+                {% for ans in selected_answers %}
+                    <li><strong>Q{{ loop.index }}:</strong> {{ answer_letters[ans] }} (Selected)</li>
+                {% endfor %}
+            </ul>
+
+            <div class="score">
+                Final Score: {{ score }}%
+            </div>
+            <div class="score" style="color: #4CAF50;">
+                Analysis Accuracy: {{ accuracy }}%
+            </div>
+
+            <br>
+            <a href="/" style="text-decoration: none;">
+                <button type="button">Upload another quiz sheet</button>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Automated Quiz Checker</p>
+    </footer>
+
+</body>
+</html>

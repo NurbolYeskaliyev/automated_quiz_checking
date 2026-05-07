@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Quiz Checking with Computer Vision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Automated Quiz Checking with Computer Vision</h1>
+        <p>This project automates the process of checking quiz answers from scanned or photographed sheets.</p>
+    </header>
+
+    <section>
+        <h2>Upload Your Quiz Sheet</h2>
+        <form action="/process" method="POST" enctype="multipart/form-data">
+            <input type="file" name="quizImage" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Here our demo video for CV</h2>
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/6z8OhLEcITE" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Automated Quiz Checker</p>
+    </footer>
+</body>
+</html>
