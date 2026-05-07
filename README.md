@@ -22,4 +22,4 @@ Project demonstration: [https://www.youtube.com/embed/6z8OhLEcITE](https://www.y
 * python app.py
 
 ### Link for website
-* https://automated-blank-checking.onrender.com
+* [https://automated-blank-checking.onrender.com](https://automated-blank-checking.onrender.com)
