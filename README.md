@@ -20,3 +20,6 @@ Project demonstration: [https://www.youtube.com/embed/6z8OhLEcITE](https://www.y
   
 ### You can run by this command
 * python app.py
+
+### Link for website
+* https://automated-blank-checking.onrender.com
